@@ -1,7 +1,7 @@
 package com.example.demo.entity;
 
 import java.time.LocalDate;
-
+import jakarta.validation.constraints.*;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;

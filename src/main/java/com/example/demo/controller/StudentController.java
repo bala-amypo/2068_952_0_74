@@ -23,7 +23,7 @@ public class StudentController {
     StudentService stdser;
     
     @PostMapping("/addStudent")
-    public Student addStudent(@Validate @RequestBody Student st){
+    public Student addStudent(@RequestBody Student st){
         return stdser.poststudent(st);
     }
     @GetMapping("/getall")
