@@ -3,7 +3,7 @@ package com.example.demo.controller;
 import java.util.List;
 import java.util.Optional;
 
-
+import jakarta.validation.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ public class StudentController {
     StudentService stdser;
     
     @PostMapping("/addStudent")
-    public Student addStudent(@RequestBody Student st){
+    public Student addStudent(@Validate @RequestBody Student st){
         return stdser.poststudent(st);
     }
     @GetMapping("/getall")
