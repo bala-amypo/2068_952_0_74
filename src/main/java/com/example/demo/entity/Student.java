@@ -11,10 +11,11 @@ import jakarta.persistence.GenerationType;
 public class Student {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @
+    @NotBlank(message="Id should not be empty,null or blank")
     private Long id;
     private String name;
     private String dept;
+    @Past(message="Present and Future date cannot be accepted")
     private LocalDate dob;
     private float cgpa;
     public Long getId(){
