@@ -20,6 +20,7 @@ import com.example.demo.service.StudentService;
 public class StudentController {
     @Autowired
     StudentService stdser;
+    
     @PostMapping("/addStudent")
     public Student addStudent(@RequestBody Student st){
         return stdser.poststudent(st);
