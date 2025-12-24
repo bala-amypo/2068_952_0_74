@@ -16,8 +16,9 @@ public class Student {
     private String name;
     private String dept;
     @Past(message="Present and Future date cannot be accepted")
-    private LocalDate dob;
+    private Long age;
     private float cgpa;
+    private bool isPlaced;
     public Long getId(){
         return id;
     }
@@ -36,11 +37,11 @@ public class Student {
     public void setDept(String dept){
         this.dept=dept;
     }
-    public LocalDate getDob(){
-        return dob;
+    public Long getAge(){
+        return age;
     }
-    public void setDob(LocalDate dob){
-        this.dob=dob;
+    public void setAge(LocalDate dob){
+        this.age=age;
     }
     public float getCgpa(){
         return cgpa;
