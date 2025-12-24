@@ -10,5 +10,4 @@ public interface StudentService {
     Optional<Student> getById(Long id);
     String updateData(Long id, Student st);
     String deleteData(Long id);
-    List<Student>getA
 }
