@@ -18,7 +18,7 @@ public class Student {
     @Past(message="Present and Future date cannot be accepted")
     private Long age;
     private float cgpa;
-    private bool isPlaced;
+    private boolean isPlaced;
     public Long getId(){
         return id;
     }
@@ -40,7 +40,7 @@ public class Student {
     public Long getAge(){
         return age;
     }
-    public void setAge(LocalDate dob){
+    public void setAge(Long age){
         this.age=age;
     }
     public float getCgpa(){
@@ -49,14 +49,21 @@ public class Student {
     public void setCgpa(float cgpa){
         this.cgpa=cgpa;
     }
+    public boolean getIsPlaced(){
+        return false;
+    }
+    public void setIsPlaced(boolean isPlaced){
+        this.isPlaced=true;
+    }
     public Student(){
 
     }
-    public Student(Long id,String name,String dept,LocalDate dob,float cgpa){
+    public Student(Long id,String name,String dept,Long age,float cgpa, boolean isPlaced){
         this.id=id;
         this.name=name;
         this.dept=dept;
-        this.dob=dob;
+        this.age=age;
         this.cgpa=cgpa;
+        this.isPlaced=false;
     }
 }
